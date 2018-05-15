@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://iConnect.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://iConnect.com/">
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="loginUI" type="tns:loginUI"/>
+
+<xs:element name="loginUIResponse" type="tns:loginUIResponse"/>
+
+<xs:element name="signUp" type="tns:signUp"/>
+
+<xs:element name="threadCreate" type="tns:threadCreate"/>
+
+<xs:element name="threadEdit" type="tns:threadEdit"/>
+
+<xs:complexType name="signUp">
+<xs:sequence>
+<xs:element name="nickname" type="xs:string" minOccurs="0"/>
+<xs:element name="loginID" type="xs:string" minOccurs="0"/>
+<xs:element name="pass" type="xs:string" minOccurs="0"/>
+<xs:element name="confirmPass" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginUI">
+<xs:sequence>
+<xs:element name="loginId" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginUIResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="threadCreate">
+<xs:sequence>
+<xs:element name="titleThread" type="xs:string" minOccurs="0"/>
+<xs:element name="lastEditedTime" type="xs:string" minOccurs="0"/>
+<xs:element name="editedBy" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="threadEdit">
+<xs:sequence>
+<xs:element name="thread" type="xs:int"/>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+<xs:element name="editedTime" type="xs:string" minOccurs="0"/>
+<xs:element name="editedUser" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
