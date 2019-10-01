@@ -209,14 +209,16 @@ public class createThread extends javax.swing.JFrame {
             // check for empty fields
             if (title.isEmpty() || createdBy.isEmpty()) {
 
-                JOptionPane.showMessageDialog(null, "Please fill all the required fileds...!", "Error", JOptionPane.ERROR_MESSAGE);
+                // error messasges
+                JOptionPane.showMessageDialog(null, "Please fill all the required fileds....!", "Error", JOptionPane.ERROR_MESSAGE);
             } else {
 
                 // call threadCreate() from server
                 threadCreate(title, editedTime, createdBy);
 
                 this.dispose();
-                JOptionPane.showMessageDialog(null, "Thread Created Successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
+                // sucess messasges
+                JOptionPane.showMessageDialog(null, "Successfully Created Thread", "Success", JOptionPane.INFORMATION_MESSAGE);
                 
                 // direct select thread if creating thread is successful
                 selectThread st = new selectThread();
